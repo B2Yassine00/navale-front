@@ -1,0 +1,162 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    width: 25%; /* Chaque section prend 40% de la largeur */
+    background-color: rgb(88, 7, 7); /* Fond semi-transparent */
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    font-size: 15px; 
+    padding-top: 10px;
+    min-height: 280px; /* Hauteur minimale pour tous les blocs */
+    border: 5px solid #F9943B;
+  }
+  
+  .forgot-password-connexion {
+    color: #F9943B;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .btn-close-popup {
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+
+
+
+
+.fond-secondaire-connexion {
+    background: url('../images/halloween5.jpeg') no-repeat center center fixed;
+    /*background-size: 110%;*/
+    /*background-position: center 110px;*/
+    background-size: cover; 
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+
+}
+.container-connexion {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* S'assurer que chaque bloc a la mÃªme hauteur */
+    width: 100%;
+    padding: 20px;
+}
+
+/* Left and Right side containers */
+.left-side-connexion, .right-side-connexion {
+    width: 40%; /* Chaque section prend 40% de la largeur */
+    background-color: rgba(88, 7, 7, 0.7); /* Fond semi-transparent */
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    font-size: 15px; 
+    padding-top: 10px;
+    min-height: 280px; /* Hauteur minimale pour tous les blocs */
+    border: 5px solid #F9943B;
+}
+
+.input-mail {
+    width: 85%; /* Les champs de saisie prennent toute la largeur */
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #1e0f769d;
+    color: white;
+    border: 2.5px solid #F9943B;
+}
+
+
+/* Add this media query for larger screens to place left and right content side by side */
+@media (min-width: 768px) {
+    .container-connexion {
+        flex-direction: row; /* Change to row layout for larger screens */
+        justify-content: space-between; /* Add space between left and right side */
+        align-items: flex-start; /* Align items at the top */
+    }
+
+    .left-side-connexion, .right-side-connexion {
+        width: 45%; /* Each side takes up 45% of the container width */
+    }
+}
+
+.input-connexion {
+    width: 50%; /* Les champs de saisie prennent toute la largeur */
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #1e0f769d;
+    color: white;
+    border: 2.5px solid #F9943B;
+}
+/* Button and input styling */
+.btn-connexion {
+    font-family: 'Architects Daughter', cursive;
+    background-color: #F9943B;
+    border: 2px solid #8C1111;
+    color: #8C1111;
+    font-size: 22px;
+    margin: 10px;
+    border-radius: 50px;
+    text-align: center;
+    width: 90%; /* Use full width on smaller screens */
+    max-width: 350px; /* Restrict max width */
+    height: 50px; /* Smaller height for mobile */
+}
+
+.btn-co-ins-connexion {
+    font-family: 'Architects Daughter', cursive;
+    background-color: #F9943B;
+    border: 2px solid #8C1111;
+    color: #8C1111;
+    font-size: 26px;
+    margin: 10px;
+    padding: 0;
+    border-radius: 50px;
+    text-align: center;
+    width: 15%;
+    height: 50px;
+    min-width: 150px;
+    cursor: pointer;
+}
+.btn-co-ins-connexion:hover{
+    color: white;
+    border-color: white;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8C1111;
+    border-width: 4px;
+    box-shadow: none;
+}
+
+.forgot-password-connexion {
+    color: #F9943B;
+    font-size: 26px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;  
+}
+
+.forgot-password-connexion:hover {
+    text-decoration: underline;
+}  

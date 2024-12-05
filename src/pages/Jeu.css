@@ -1,0 +1,305 @@
+.jeu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('../images/halloween9.webp') no-repeat center center fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  
+  /* Animation du fond d'écran */
+  animation: backgroundAnim 15s infinite alternate;
+}
+
+@keyframes backgroundAnim {
+  0% {
+    background-size: 100%;
+    background-position: center center;
+  }
+  50% {
+    background-size: 110%;
+    background-position: center center;
+  }
+  100% {
+    background-size: 100%;
+    background-position: center center;
+  }
+}
+
+.players-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.player-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ship-selection {
+  margin-bottom: 20px;
+}
+
+.ships {
+  display: flex;
+  gap: 10px;
+}
+
+.dragging-ship-preview {
+  display: flex;
+  background-repeat: no-repeat;
+}
+
+.dragging-ship-part {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.ship {
+  padding: 10px 15px;
+  background-color: #2e2e2e;
+  border: 1px solid #555;
+  border-radius: 5px;
+  cursor: move;
+  user-select: none;
+  color: #fff;
+}
+
+.ship:hover {
+  background-color: #3d3d3d;
+}
+
+.ship-info {
+  display: flex;
+  align-items: center;
+}
+
+.rotate-ship-button {
+  margin-left: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+}
+
+.rotate-ship-button:hover {
+  color: #ff5722;
+}
+
+.grids {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.grid-container h3 {
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  position: relative;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+/* visualisation du resultat de l'attaque */
+.miss-indicator,
+.hit-indicator {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.winner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.winner-message {
+  color: white;
+  padding: 40px;
+  font-size: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.win-message {
+  background-color: rgba(0, 255, 0, 0.4);
+}
+
+.lose-message {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+.rejouer-button {
+  display : block;
+  width : 200px;
+  text-align: center;
+  margin : 20px auto;
+  background-color: #F9943B;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none; 
+  cursor: pointer;  
+  text-align: center;
+  text-decoration: none;
+}
+
+.rejouer-button:hover {
+  background-color: #f3ae72; 
+}
+
+.resign-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  top: 120px;  /* Moved down below the header */
+  right: 50px;  /* Moved slightly more inward from the edge */
+  z-index: 100; /* Ensure it stays above other elements  */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px #00000033;
+}
+
+.resign-button:hover {
+  background-color: #c82333;
+}
+
+/* Espacement entre les grilles pendant la phase de bataille */
+.battle-grids {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.player-area-battle {
+  flex: 1;
+  margin: 0 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;  
+}
+
+/* Style pour les grilles des joueurs */
+.player-area {
+  flex: 1;
+  margin: 0 20px;
+  
+}
+
+.cell:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+.ship-cell {
+  cursor: move;
+}
+
+/* Styles pour le drag preview personnalisé */
+.dragging-ship {
+  opacity: 0.7;
+}
+
+.dragging-ship .cell {
+  width: 40px;
+  height: 40px;
+  border: 1px dashed #444;
+  background-color: #b71c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-cell {
+  background-color: rgba(0, 255, 0, 0.4);
+}
+
+.invalid-preview-cell {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+.remove-ship-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px;
+  color: #fff;
+}
+
+.remove-ship-button:hover {
+  color: red;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #2e2e2e;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 5px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #3d3d3d;
+  transform: scale(1.05);
+}
+
+/* Ajout des ombres portées */
+.grid-container, .ship, button {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

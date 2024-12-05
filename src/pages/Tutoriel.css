@@ -1,0 +1,46 @@
+/* Main container */
+.fond-jouer-tutoriel {
+    background: url('../images/halloween4.jpeg') no-repeat center center fixed;
+    /*background-size: 110%;*/
+    /*background-position: center 110px;*/
+    background-size: cover; 
+    width: 100vw;
+    height: 100vh;
+    color: #fff; 
+}
+
+.container-tutoriel {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* S'assurer que chaque bloc a la même hauteur */
+    width: 100%;
+    padding: 20px;
+}
+
+.text-zone-tutoriel {
+    width: 30%; /* Chaque section prend 30% de la largeur */
+    background-color: rgba(88, 7, 7, 0.7); /* Fond semi-transparent */
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    font-size: 25px; 
+    min-height: 400px; /* Hauteur minimale pour tous les blocs */
+    border: 5px solid #F9943B;
+}
+
+@media (max-width: 768px) {
+    .container-tutoriel {
+        flex-direction: row; /* Stack elements vertically on small screens */
+        align-items: stretch;
+    }
+
+    .text-zone-tutoriel {
+        width: 45%; /* Full width on smaller screens */
+        font-size: 15px;
+        
+    }
+}

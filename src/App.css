@@ -1,0 +1,65 @@
+/* App.css */
+
+/* App.css */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1; /* Cela permet au contenu de prendre toute la place disponible */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+   /* Assure que le footer reste sous le contenu */
+}
+
+
+
+body {
+  font-family: 'Architects Daughter', cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #f9943b;
+}
+
+main {
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}

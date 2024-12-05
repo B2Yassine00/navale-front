@@ -1,0 +1,155 @@
+/* Ensure full height for body and html */
+html, body {
+    height: 100%; /* Make sure the body and HTML take the full height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur pour les informations du jeu */
+.fond-accueil {
+    background: url('../images/halloween1.jpeg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Create a parallax effect */
+    width: 100%;
+    min-height: 100vh; /* Ensures it covers the full viewport height */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media query for medium-sized screens */
+@media (max-width: 768px) {
+   
+    .title-bataille-accueil{
+        font-size: 50px;
+        padding: 0;
+        margin: 0;
+    }
+    .title-navale-accueil{
+        font-size: 45px;
+        color: #1e0f76;
+        padding: 0;
+        margin: 0;
+    }
+
+    .text-zone-accueil {
+        width: 100%; /* Take full width */
+        margin-bottom: 20px; /* Add space between stacked sections */
+    }
+    .star-button-accueil {
+        width: 100px; /* Reduce size */
+        height: 100px; /* Reduce size */
+        margin-top: 20px;
+    }
+
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+    .title-bataille-accueil{
+        font-size: 50px;
+        padding: 0;
+        margin: 0;
+    }
+    .title-navale-accueil{
+        font-size: 45px;
+        color: #1e0f76;
+        padding: 0;
+        margin: 0;
+    }
+
+    .text-zone-accueil {
+        width: 100%; /* Full width for mobile */
+        font-size: 3.5vw; /* Adjust font size */
+    }
+
+    .star-button-accueil {
+        width: 100px; /* Smaller size for mobile */
+        height: 100px;
+    }
+}
+
+
+.title-bataille-accueil{
+    font-size: 100px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-weight: 1000;
+    display: inline-flex;
+}
+.title-navale-accueil{
+    font-size: 90px;
+    color: #1e0f76;
+    padding: 0;
+    margin: 0;
+    font-weight: 1000;
+    display: inline-flex;
+}
+
+.game-info-accueil {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Règles du jeu à gauche avec une image de fond */
+
+.container-accueil {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* S'assurer que chaque bloc a la même hauteur */
+    width: 100%;
+    padding: 20px;
+}
+
+.text-zone-accueil {
+    width: 40%; /* Chaque section prend 30% de la largeur */
+    background-color: rgba(88, 7, 7, 0.7);
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    font-size: 25px; 
+    min-height: 300px; /* Hauteur minimale pour tous les blocs */
+    border: 5px solid #F9943B;
+}
+
+
+/* Objectifs du jeu à droite avec une image de fond */
+
+/* Bouton de jeu */
+.star-button-accueil {
+    position: relative;
+    display: inline-block;
+    width: 200px; /* Ajuste la taille de l'étoile */
+    height: 200px;
+    margin-top: 50px;
+    background-color: rgba(228, 104, 32, 0.836); /* Fond semi-transparent */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Pour ajouter un léger effet au survol */
+  }
+  
+  .star-button-accueil:hover {
+    transform: scale(1.3); /* Agrandit légèrement l'étoile au survol */
+  }
+  
+  .star-text-accueil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  
+  
+  

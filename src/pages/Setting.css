@@ -1,0 +1,167 @@
+.page-setting {
+  background: url('../images/halloween13.webp') no-repeat center center fixed;
+  /*background-size: 110%;*/
+  /*background-position: center 110px;*/
+  background-size: cover; 
+  width: 100vw;
+  height: 100vh;
+  color: #fff; 
+}
+
+
+.content-setting-single-section {
+  width: 90%; /* Augmenter la largeur pour plus d'espace */
+  max-width: 1100px;
+  margin: auto;
+  background-color: rgba(88, 7, 7, 0.7);
+  border: 5px solid #F9943B; /* Bordure de la zone */
+  padding: 30px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.setting-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+ 
+.select-container,
+.input-container,
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  
+}
+ 
+.input-setting-choice {
+  width: 50%; /* Les champs de saisie prennent toute la largeur */
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #1e0f769d;
+  color: white;
+  border: 2.5px solid #F9943B;
+}
+
+.select-container h3,
+.input-container h3,
+.toggle-container h3 {
+  margin: 0;
+  padding-right: 10px;
+  flex: 1;
+  color:#F9943B; /* Couleur du texte */
+  text-align: left;
+  width: 200px;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 30px;   
+}
+
+.select-container select,
+.input-container input[type="file"],
+.toggle-container input[type="checkbox"],
+.input-container input[type="range"] {
+  flex: 2;
+}
+
+.boat-selection {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start; /* Assure l'alignement à gauche */
+  margin-bottom: 20px;
+  padding-left: 30px; /* Augmente la marge à gauche pour décaler davantage */
+}
+
+.boat-image, .boat-image-3 {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+  /*margin: 60px;*/
+  margin-right: 100px;
+}
+
+.boat-image:hover, .boat-image-3:hover {
+  transform: scale(1.1);
+  border: 2px solid #b64a3b; /* Ajout d'une bordure dorée */
+}
+
+.boat-image.selected, .boat-image-3.selected {
+  border: 3px solid rgb(230, 224, 197); /* Couleur de surbrillance #b64a3b;*/
+  border-radius: 8px;
+  transform: scale(1.1); /* Effet d'agrandissement */
+}
+
+.btn-setting {
+  display: block;
+  margin: 20px auto;
+  background-color: #F9943B;
+  border: none;
+  color:rgba(88, 7, 7, 0.9);
+  font-size: 30px;
+  padding: 12px 25px;
+  border-radius: 15px;
+  border: 3px solid rgba(88, 7, 7, 0.9);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Architects Daughter', cursive;
+  
+}
+
+.btn-setting:hover {
+  background-color: #e57d2b;
+  transform: scale(1.05);
+}
+
+select, input[type="file"], input[type="range"] {
+  width: 50%; /* Les champs de saisie prennent toute la largeur */
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #1e0f769d;
+  color: white;
+  border: 2.5px solid #F9943B;
+}
+
+input[type="checkbox"] {
+  margin-left: 10px;
+  transform: scale(1.2); /* Agrandit la case à cocher */
+}
+
+.flag-preview {
+  margin-top: 10px;
+  max-width: 100px;
+  border: 2px solid #F9943B; /* Bordure dorée */
+  border-radius: 5px;
+}
+
+.audio-control {
+  margin: 10px;
+  padding: 10px;
+  background-color: #F9943B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-audio-control {
+  display: block;
+  margin: 20px auto;
+  margin-left: 10px;
+  background-color: #F9943B;
+  border: none;
+  color: rgba(88, 7, 7, 0.9);
+  font-size: 20px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: 3px solid rgba(88, 7, 7, 0.9);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Architects Daughter', cursive;
+}
+
+.btn-audio-control:hover {
+  background-color: #e57d2b;
+  transform: scale(1.05);
+}
