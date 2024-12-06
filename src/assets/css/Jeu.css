@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url('../images/halloween9.webp') no-repeat center center fixed;
+  background: url("../images/halloween9.webp") no-repeat center center
+    fixed;
   background-size: cover;
   width: 100vw;
   height: 100vh;
   color: #fff;
-  
+
   /* Animation du fond d'écran */
   animation: backgroundAnim 15s infinite alternate;
 }
@@ -57,7 +58,6 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 
 .ship {
   padding: 10px 15px;
@@ -171,23 +171,23 @@
 }
 
 .rejouer-button {
-  display : block;
-  width : 200px;
+  display: block;
+  width: 200px;
   text-align: center;
-  margin : 20px auto;
-  background-color: #F9943B;
+  margin: 20px auto;
+  background-color: #f9943b;
   padding: 10px 20px;
   color: white;
   font-size: 1.2rem;
   border-radius: 5px;
-  border: none; 
-  cursor: pointer;  
+  border: none;
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
 }
 
 .rejouer-button:hover {
-  background-color: #f3ae72; 
+  background-color: #f3ae72;
 }
 
 .resign-button {
@@ -199,8 +199,8 @@
   cursor: pointer;
   font-weight: bold;
   position: absolute;
-  top: 120px;  /* Moved down below the header */
-  right: 50px;  /* Moved slightly more inward from the edge */
+  top: 120px; /* Moved down below the header */
+  right: 50px; /* Moved slightly more inward from the edge */
   z-index: 100; /* Ensure it stays above other elements  */
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 4px #00000033;
@@ -224,14 +224,13 @@
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 
 /* Style pour les grilles des joueurs */
 .player-area {
   flex: 1;
   margin: 0 20px;
-  
 }
 
 .cell:hover {
@@ -300,6 +299,8 @@ button:hover {
 }
 
 /* Ajout des ombres portées */
-.grid-container, .ship, button {
+.grid-container,
+.ship,
+button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

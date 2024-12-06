@@ -1,18 +1,18 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { AudioProvider } from './AudioContext';
-import Connexion from './pages/Connexion';
-import Jouer from './pages/Jouer';
-import Tutoriel from './pages/Tutoriel';
-import Accueil from './pages/Accueil';
-import Jouer_solo from './pages/Jouer_solo';
-import Jouer_1v1 from './pages/Jouer_1v1';
-import Jeu from './pages/Jeu';
-import Profile from './pages/Profile';
-import Setting from './pages/Setting';
-import Layout from './components/Layout';
-import { NotificationProvider } from './pages/NotificationProvider'
-import ProtectedRoutes from './ProctectedRoutes';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Connexion from "./pages/Connexion";
+import Jouer from "./pages/Jouer";
+import Tutoriel from "./pages/Tutoriel";
+import Accueil from "./pages/Accueil";
+import Jouer_solo from "./pages/Jouer_solo";
+import Jouer_1v1 from "./pages/Jouer_1v1";
+import Jeu from "./pages/Jeu";
+import Profile from "./pages/Profile";
+import Setting from "./pages/Setting";
+import Layout from "./components/Layout";
+import { NotificationProvider } from "./pages/NotificationProvider";
+import ProtectedRoutes from "./ProctectedRoutes";
+import { AudioProvider } from "./components/AudioContext";
 
 function App() {
   return (
@@ -32,7 +32,6 @@ function App() {
                 <Route path="/connexion/profile" element={<Profile />} />
                 <Route path="/connexion/setting" element={<Setting />} />
               </Route>
-
             </Routes>
           </Layout>
         </Router>

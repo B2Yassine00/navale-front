@@ -1,0 +1,93 @@
+.fond-jouer-solo {
+  background: url("../images/halloween8.jpeg") no-repeat center center fixed;
+  /*background-size: 110%;*/
+  /*background-position: center 110px;*/
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+}
+.container-jouer-solo {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* S'assurer que chaque bloc a la même hauteur */
+  width: 100%;
+  padding: 20px;
+}
+
+/* Styles pour les zones de jeu */
+.game-mode-jouer-solo {
+  width: 460px;
+  height: 490px;
+  background-color: rgba(88, 7, 7, 0.7);
+  border: 5px solid #f9943b; /* Bordure de la zone */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 40px;
+  padding: 20px;
+  margin-left: 10%;
+}
+
+.text-zone-jouer-solo {
+  width: 30%; /* Chaque section prend 30% de la largeur */
+  background-color: rgba(88, 7, 7, 0.7); /* Fond semi-transparent */
+  border-radius: 15px;
+  text-align: left;
+  margin-right: 10%;
+  padding: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  min-height: 400px; /* Hauteur minimale pour tous les blocs */
+  border: 5px solid #f9943b;
+}
+
+.game-image-jouer-solo {
+  width: 385px;
+  height: 345px;
+  border: 5px solid #f9943b; /* Bordure autour de l'image */
+}
+
+.game-link-jouer-solo {
+  font-size: 35px;
+  color: #f9943b;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+/* Style des puces */
+.bullet-jouer-solo {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #f9943b;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+/* Bouton pour commencer la partie */
+.start-button-jouer-solo {
+  font-family: "Architects Daughter", cursive;
+  background-color: #f9943b;
+  border: 2px solid #8c1111;
+  color: #8c1111;
+  font-size: 25px;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-top: 50px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 5px;
+  width: 90%; /* Use full width on smaller screens */
+  max-width: 250px; /* Restrict max width */
+  height: 50px; /* Smaller height for mobile */
+  cursor: pointer;
+}
+
+.start-button-jouer-solo:hover {
+  background-color: #f9943b; /* A darker hover effect */
+  border: 5px solid wheat;
+  color: wheat;
+}

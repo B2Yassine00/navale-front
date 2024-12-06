@@ -1,7 +1,7 @@
-import React, { createContext, useState, useRef, useEffect } from 'react';
-import audioFile1 from './audio/audio.m4a';
-import audioFile2 from './audio/audio3.mp3';
-import audioFile3 from './audio/hakim.mpga';
+import React, { createContext, useState, useRef, useEffect } from "react";
+import audioFile1 from "../assets/audio/audio.m4a";
+import audioFile2 from "../assets/audio/audio3.mp3";
+import audioFile3 from "../assets/audio/hakim.mpga";
 
 export const AudioContext = createContext();
 
@@ -10,7 +10,7 @@ export const AudioProvider = ({ children }) => {
   const audioRef2 = useRef(new Audio(audioFile2));
   const audioRef3 = useRef(new Audio(audioFile3));
   const [isPlaying, setIsPlaying] = useState(false);
-  const [activeAudio, setActiveAudio] = useState('audio1');
+  const [activeAudio, setActiveAudio] = useState("audio1");
   const [volume, setVolume] = useState(50);
   const [userPaused, setUserPaused] = useState(true);
 
@@ -30,11 +30,11 @@ export const AudioProvider = ({ children }) => {
       audioRef3.current.pause();
       setUserPaused(true);
     } else {
-      if (activeAudio === 'audio1') {
+      if (activeAudio === "audio1") {
         audioRef1.current.play();
-      } else if (activeAudio === 'audio2') {
+      } else if (activeAudio === "audio2") {
         audioRef2.current.play();
-      } else if (activeAudio === 'audio3') {
+      } else if (activeAudio === "audio3") {
         audioRef3.current.play();
       }
       setUserPaused(false);
@@ -52,18 +52,28 @@ export const AudioProvider = ({ children }) => {
 
     setActiveAudio(audioName);
     if (isPlaying && !userPaused) {
-      if (audioName === 'audio1') {
+      if (audioName === "audio1") {
         audioRef1.current.play();
-      } else if (audioName === 'audio2') {
+      } else if (audioName === "audio2") {
         audioRef2.current.play();
-      } else if (audioName === 'audio3') {
+      } else if (audioName === "audio3") {
         audioRef3.current.play();
       }
     }
   };
 
   return (
-    <AudioContext.Provider value={{ isPlaying, togglePlayPause, switchAudio, activeAudio, volume, setVolume, userPaused }}>
+    <AudioContext.Provider
+      value={{
+        isPlaying,
+        togglePlayPause,
+        switchAudio,
+        activeAudio,
+        volume,
+        setVolume,
+        userPaused,
+      }}
+    >
       {children}
     </AudioContext.Provider>
   );

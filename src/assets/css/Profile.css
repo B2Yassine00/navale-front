@@ -1,0 +1,115 @@
+/* Style général de la page de profil */
+.page-profile {
+  background: url("../images/halloween6.jpeg") no-repeat center center
+    fixed;
+  /*background-size: 110%;*/
+  /*background-position: center 110px;*/
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+}
+
+.content-profile h1 {
+  font-size: 28px; /* Taille réduite pour le titre */
+  color: #f9943b;
+  margin-bottom: 15px;
+}
+
+.info-profile {
+  font-size: 16px; /* Taille réduite pour les infos du profil */
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.info-profile p {
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+/* Style des boutons */
+.btn-profile {
+  font-family: "Architects Daughter", cursive;
+  background-color: #f9943b;
+  border: 2px solid #8c1111;
+  color: #8c1111;
+  font-size: 22px;
+  margin: 10px 0px;
+  padding: 0px;
+  border-radius: 50px;
+  text-align: center;
+  width: 65%; /* Use full width on smaller screens */
+  min-width: 300px; /* Restrict max width */
+  height: 50px; /* Smaller height for mobile */
+  cursor: pointer;
+}
+
+.btn-profile:hover {
+  color: white;
+  border-color: white;
+}
+
+.btn-large-danger-profile {
+  background-color: #ff5555;
+  border: none;
+  color: white;
+  font-size: 18px; /* Taille réduite du texte des boutons */
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-large-profile {
+  font-family: "Architects Daughter", cursive;
+  background-color: #f9943b;
+  border: 2px solid #8c1111;
+  color: #8c1111;
+  font-size: 22px;
+  margin: 10px 0;
+  padding: 0px;
+  border-radius: 50px;
+  text-align: center;
+  width: 30%; /* Use full width on smaller screens */
+  min-width: 200px; /* Restrict max width */
+  height: 50px; /* Smaller height for mobile */
+}
+.btn-large-danger-profile:hover {
+  background-color: #e74c3c;
+}
+.btn-large-profile:hover {
+  color: white;
+  border-color: white;
+}
+
+.content-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* S'assurer que chaque bloc a la même hauteur */
+  width: 100%;
+  padding: 20px;
+}
+
+.section-left-profile,
+.section-middle-profile,
+.section-right-profile {
+  width: 30%; /* Chaque section prend 30% de la largeur */
+  background-color: rgba(88, 7, 7, 0.7); /* Fond semi-transparent */
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  min-height: 250px; /* Hauteur minimale pour tous les blocs */
+}
+
+.input-profile {
+  width: 50%; /* Les champs de saisie prennent toute la largeur */
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #1e0f769d;
+  color: white;
+  border: 2.5px solid #f9943b;
+}
