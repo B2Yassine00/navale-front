@@ -11,7 +11,8 @@ import Jeu from './pages/Jeu';
 import Profile from './pages/Profile';
 import Setting from './pages/Setting';
 import Layout from './components/Layout';
-import {NotificationProvider} from './pages/NotificationProvider'
+import { NotificationProvider } from './pages/NotificationProvider'
+import ProtectedRoutes from './ProctectedRoutes';
 
 function App() {
   return (
@@ -23,12 +24,15 @@ function App() {
               <Route path="/" element={<Accueil />} />
               <Route path="/connexion" element={<Connexion />} />
               <Route path="/tutoriel" element={<Tutoriel />} />
-              <Route path="/jouer" element={<Jouer />} />
-              <Route path="/jouer/jouer_solo" element={<Jouer_solo />} />
-              <Route path="/jouer/Jouer_1v1" element={<Jouer_1v1 />} />
-              <Route path="/jouer/jeu" element={<Jeu />} />
-              <Route path="/connexion/profile" element={<Profile />} />
-              <Route path="/connexion/setting" element={<Setting />} />
+              <Route element={<ProtectedRoutes />}>
+                <Route path="/jouer" element={<Jouer />} />
+                <Route path="/jouer/jouer_solo" element={<Jouer_solo />} />
+                <Route path="/jouer/Jouer_1v1" element={<Jouer_1v1 />} />
+                <Route path="/jouer/jeu" element={<Jeu />} />
+                <Route path="/connexion/profile" element={<Profile />} />
+                <Route path="/connexion/setting" element={<Setting />} />
+              </Route>
+
             </Routes>
           </Layout>
         </Router>

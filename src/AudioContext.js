@@ -12,7 +12,7 @@ export const AudioProvider = ({ children }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeAudio, setActiveAudio] = useState('audio1');
   const [volume, setVolume] = useState(50);
-  const [userPaused, setUserPaused] = useState(false);
+  const [userPaused, setUserPaused] = useState(true);
 
   useEffect(() => {
     audioRef1.current.loop = true;

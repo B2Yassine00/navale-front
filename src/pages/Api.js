@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 // Base URL de l'API (à adapter si nécessaire)
-const API_URL = "http://my-app-deployment.francecentral.cloudapp.azure.com:8080";
+//const API_URL = "http://my-app-deployment.francecentral.cloudapp.azure.com:8080";
+const API_URL = "http://localhost:8081";
 
 
 // 1. Fonction pour gérer le login
